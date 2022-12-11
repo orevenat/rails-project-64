@@ -24,4 +24,6 @@ production:
   <<: *default
   adapter: postgresql
   encoding: unicode
-  url: <%= ENV['DATABASE_URL'] %>
+  database: railwayapp_production
+  username: railway
+  password: <%= ENV["RAILWAYAPP_DATABASE_PASSWORD"] %>
