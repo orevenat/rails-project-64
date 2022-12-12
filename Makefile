@@ -9,7 +9,7 @@ setup:
 lint:
 	bundle exec rubocop
 
-linter-fix:
+lint-fix:
 	bundle exec rubocop --auto-correct
 
 slim-lint:
