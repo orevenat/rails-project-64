@@ -1,1 +1,11 @@
 h1 Коллективный блог
+
+.row
+  - @posts.each do |post|
+    .col-md-12
+      .card.mb-3
+        .card-body
+          h2.h5.card-title
+            = link_to post.title, posts_path(post), class: 'link-dark text-decoration-none'
+          .card-text.mb-2
+            = post.body

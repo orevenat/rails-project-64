@@ -1,0 +1,7 @@
+h1 Новая статья
+
+= simple_form_for @post do |f|
+  = f.input :title
+  = f.input :body, as: :text
+  = f.association :category
+  = f.button :submit
