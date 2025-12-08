@@ -1,13 +1,17 @@
-# frozen_string_literal: true
-
 class ApplicationController < ActionController::Base
-  helper_method :current_or_guest_user
+  # Only allow modern browsers supporting webp images, web push, badges, import maps, CSS nesting, and CSS :has.
+  allow_browser versions: :modern
 
-  def current_or_guest_user
-    current_user || guest_user
-  end
+  private
 
-  def guest_user
-    Guest.new
+  def authenticate_user!
+    if user_signed_in?
+      super
+    else
+      respond_to do |format|
+        format.html { redirect_to new_user_session_path, alert: "Please sign in." }
+        format.json { render json: { error: "Unauthorized" }, status: :unauthorized }
+      end
+    end
   end
 end

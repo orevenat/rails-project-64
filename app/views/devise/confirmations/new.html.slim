@@ -1,0 +1,20 @@
+h2.mb-4 = t('devise.confirmations.new.resend_confirmation_instructions')
+
+= simple_form_for(resource, as: resource_name, url: confirmation_path(resource_name), html: { method: :post }) do |f|
+  = f.error_notification
+
+  .mb-3
+    = f.input :email,
+              required: true,
+              autofocus: true,
+              input_html: { 
+                autocomplete: "email",
+                value: (resource.pending_reconfirmation? ? resource.unconfirmed_email : resource.email)
+              },
+              label: t('devise.labels.email'),
+              wrapper_html: { class: "mb-3" }
+
+  .actions.mb-3
+    = f.button :submit, t('devise.confirmations.new.resend_confirmation_instructions_button'), class: "btn-primary"
+
+= render "devise/shared/links"

@@ -1,7 +1,10 @@
-# frozen_string_literal: true
-
 class PostsController < ApplicationController
-  def show; end
+  before_action :authenticate_user!, only: %i[new create]
+
+  def show
+    @post = Post.find(params[:id])
+    @current_user_liked = current_user ? @post.likes.find_by(creator_id: current_user.id).present? : false
+  end
 
   def new
     @post = Post.new

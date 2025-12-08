@@ -1,8 +1,6 @@
-# frozen_string_literal: true
-
-ENV['RAILS_ENV'] ||= 'test'
-require_relative '../config/environment'
-require 'rails/test_help'
+ENV["RAILS_ENV"] ||= "test"
+require_relative "../config/environment"
+require "rails/test_help"
 
 module ActiveSupport
   class TestCase
@@ -14,12 +12,6 @@ module ActiveSupport
 
     include Devise::Test::IntegrationHelpers
 
-    # def log_in(user)
-    #   if integration_test?
-    #     login_as(user, scope: :user)
-    #   else
-    #     sign_in(user)
-    #   end
-    # end
+    # Add more helper methods to be used by all tests here...
   end
 end

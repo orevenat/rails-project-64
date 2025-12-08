@@ -1,0 +1,40 @@
+ol.breadcrumb
+  li.breadcrumb-item
+    = link_to "Все посты", root_path
+  li.breadcrumb-item.active
+    = @post.category.name
+
+.row.justify-content-center.mt-4
+  article.col-12
+    h1.mb-4.mb-lg-5
+      = @post.title
+    
+    .post-content
+      = simple_format(@post.body)
+    
+    .d-flex.justify-content-between.mt-5
+      #post-section
+        span.me-2
+          = @post.creator.email
+        span
+          = time_ago_in_words(@post.created_at)
+      #likes-section
+        span.me-2
+          = @post.likes.count
+
+        - if current_user
+          - if @current_user_liked
+            = link_to post_like_path(@post, @like), method: :delete, class: "link-dark" do
+              i.bi.bi-hand-thumbs-up-fill
+          - else
+            = link_to post_like_path(@post, @like), method: :post, class: "link-dark" do
+              i.bi.bi-hand-thumbs-up
+        - else
+          i.bi.bi-hand-thumbs-up
+
+/ Comments section
+.lead.mt-3#comment-section
+  span Комментарии
+  
+/  - @post.comments.roots.each do |comment|
+/    = render 'comments/comment', comment: comment

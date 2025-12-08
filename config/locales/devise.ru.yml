@@ -1,0 +1,161 @@
+---
+ru:
+  devise:
+    confirmations:
+      confirmed: "Ваш email адрес был успешно подтвержден."
+      send_instructions: "В течение нескольких минут вы получите письмо с инструкциями по подтверждению вашего email адреса."
+      send_paranoid_instructions: "Если ваш email адрес существует в нашей базе данных, вы получите письмо с инструкциями по подтверждению вашего email адреса в течение нескольких минут."
+      new:
+        resend_confirmation_instructions: "Повторно отправить инструкции по подтверждению"
+        resend_confirmation_instructions_button: "Отправить инструкции повторно"
+        instructions: "Введите ваш email адрес, и мы отправим вам инструкции по подтверждению аккаунта повторно."
+    failure:
+      already_authenticated: "Вы уже вошли в систему."
+      inactive: "Ваш аккаунт еще не активирован."
+      invalid: "Неверный %{authentication_keys} или пароль."
+      locked: "Ваш аккаунт заблокирован."
+      last_attempt: "У вас осталась еще одна попытка до блокировки аккаунта."
+      not_found_in_database: "Неверный %{authentication_keys} или пароль."
+      timeout: "Ваша сессия истекла. Пожалуйста, войдите снова, чтобы продолжить."
+      unauthenticated: "Вам необходимо войти или зарегистрироваться, чтобы продолжить."
+      unconfirmed: "Вы должны подтвердить свой email адрес, чтобы продолжить."
+    mailer:
+      confirmation_instructions:
+        welcome: "Добро пожаловать, %{email}!"
+        you_can_confirm_your_account_email: "Вы можете подтвердить email своего аккаунта по ссылке ниже:"
+        confirm_my_account: "Подтвердить мой аккаунт"
+        subject: "Инструкции по подтверждению аккаунта"
+        ignore_if_not_requested: "Если вы не запрашивали это подтверждение, проигнорируйте это письмо."
+        link_expires_in: "Ссылка действительна в течение %{hours} часов."
+      email_changed:
+        hello: "Здравствуйте, %{email}!"
+        email_is_being_changed: "Мы уведомляем вас о том, что ваш email изменяется на %{email}."
+        email_has_been_changed: "Мы уведомляем вас о том, что ваш email был изменен на %{email}."
+        subject: "Изменение email"
+        if_you_did_not_change: "Если вы не меняли email, ваша учетная запись может быть скомпрометирована."
+        contact_support_immediately: "Немедленно свяжитесь со службой поддержки."
+      password_change:
+        hello: "Здравствуйте, %{email}!"
+        password_has_been_changed: "Мы уведомляем вас о том, что ваш пароль был изменен."
+        subject: "Изменение пароля"
+        successfully_updated: "Пароль вашей учетной записи был успешно обновлен."
+        security_notice: "Важное уведомление о безопасности:"
+        if_you_did_not_change: "Если вы не меняли пароль, ваша учетная запись может быть скомпрометирована."
+        reset_password_immediately: "Немедленно сбросьте пароль через функцию 'Забыли пароль?'."
+        thank_you: "Спасибо, что используете наше приложение."
+        application_team: "Команда приложения"
+      reset_password_instructions:
+        hello: "Здравствуйте, %{email}!"
+        someone_has_requested: "Кто-то запросил ссылку для изменения вашего пароля. Вы можете сделать это по ссылке ниже."
+        change_my_password: "Изменить мой пароль"
+        subject: "Инструкции по сбросу пароля"
+        if_you_did_not_request: "Если вы не запрашивали это, проигнорируйте это письмо."
+        password_wont_change: "Ваш пароль не изменится, пока вы не перейдете по ссылке выше и не создадите новый."
+        link_expires_in: "Ссылка действительна в течение %{hours} часов."
+        need_help: "Нужна помощь?"
+        contact_support: "Свяжитесь со службой поддержки"
+      unlock_instructions:
+        hello: "Здравствуйте, %{email}!"
+        account_locked: "Ваш аккаунт был заблокирован из-за чрезмерного количества неудачных попыток входа."
+        account_locked_title: "Аккаунт заблокирован"
+        due_to_attempts: "Это произошло после %{attempts} неудачных попыток входа."
+        click_link_below: "Нажмите на ссылку ниже, чтобы разблокировать аккаунт:"
+        unlock_my_account: "Разблокировать мой аккаунт"
+        subject: "Инструкции по разблокировке аккаунта"
+        security_notice: "Важное уведомление о безопасности:"
+        if_you_did_not_lock: "Если вы не пытались войти в систему и не блокировали аккаунт, немедленно свяжитесь со службой поддержки."
+        security_guidelines: "Рекомендации по безопасности"
+        use_strong_password: "Используйте надежный пароль и не делитесь им ни с кем."
+        consider_changing_password: "Рассмотрите возможность изменения пароля, если вы подозреваете компрометацию."
+        link_expires_in: "Ссылка действительна в течение %{hours} часов."
+        need_assistance: "Нужна помощь? Свяжитесь со службой поддержки."
+    omniauth_callbacks:
+      failure: 'Не удалось аутентифицировать вас через %{kind}, потому что "%{reason}".'
+      success: "Успешная аутентификация через учетную запись %{kind}."
+    passwords:
+      no_token: "Вы не можете получить доступ к этой странице без перехода из письма о сбросе пароля. Если вы перешли из письма о сбросе пароля, убедитесь, что использовали полный предоставленный URL."
+      send_instructions: "В течение нескольких минут вы получите письмо с инструкциями по сбросу пароля."
+      send_paranoid_instructions: "Если ваш email адрес существует в нашей базе данных, вы получите ссылку для восстановления пароля на ваш email адрес в течение нескольких минут."
+      updated: "Ваш пароль был успешно изменен. Вы вошли в систему."
+      updated_not_active: "Ваш пароль был успешно изменен."
+      edit:
+        change_your_password: "Изменить ваш пароль"
+        change_my_password: "Изменить мой пароль"
+        minimum_characters: "минимум %{count} символов"
+      new:
+        forgot_your_password: "Забыли пароль?"
+        send_me_reset_password_instructions: "Отправить мне инструкции по сбросу пароля"
+        instructions: "Введите ваш email адрес, и мы отправим вам ссылку для сброса пароля."
+    registrations:
+      destroyed: "До свидания! Ваш аккаунт был успешно удален. Надеемся увидеть вас снова."
+      signed_up: "Добро пожаловать! Вы успешно зарегистрировались."
+      signed_up_but_inactive: "Вы успешно зарегистрировались. Однако мы не смогли войти в систему, потому что ваш аккаунт еще не активирован."
+      signed_up_but_locked: "Вы успешно зарегистрировались. Однако мы не смогли войти в систему, потому что ваш аккаунт заблокирован."
+      signed_up_but_unconfirmed: "Сообщение со ссылкой для подтверждения отправлено на ваш email адрес. Пожалуйста, перейдите по ссылке, чтобы активировать ваш аккаунт."
+      update_needs_confirmation: "Вы успешно обновили свой аккаунт, но нам нужно подтвердить ваш новый email адрес. Пожалуйста, проверьте вашу почту и перейдите по ссылке для подтверждения вашего нового email адреса."
+      updated: "Ваш аккаунт был успешно обновлен."
+      updated_but_not_signed_in: "Ваш аккаунт был успешно обновлен, но так как ваш пароль был изменен, вам необходимо войти снова."
+      new:
+        sign_up: "Регистрация"
+        sign_up_button: "Зарегистрироваться"
+        minimum_characters: "минимум %{count} символов"
+      edit:
+        title: "Редактирование %{resource}"
+        waiting_confirmation: "Ожидает подтверждения"
+        currently_waiting_confirmation_for: "В настоящее время ожидает подтверждения для: %{email}"
+        password_hint: "оставьте пустым, если не хотите менять%{if_minimum}%{minimum}"
+        password_hint_with_minimum: "оставьте пустым, если не хотите менять (минимум %{count} символов)"
+        leave_blank_if_you_dont_want_to_change_it: "оставьте пустым, если не хотите менять"
+        minimum_characters: "минимум %{count} символов"
+        current_password_hint: "нужен для подтверждения изменений"
+        we_need_your_current_password_to_confirm_your_changes: "нам нужен ваш текущий пароль для подтверждения изменений"
+        update_button: "Обновить"
+        cancel_my_account: "Удалить мой аккаунт"
+        cancel_account: "Удаление аккаунта"
+        unhappy: "Не довольны?"
+        cancel_my_account_button: "Удалить мой аккаунт"
+        cancel_button: "Удалить аккаунт"
+        are_you_sure: "Вы уверены?"
+        back: "Назад"
+    sessions:
+      signed_in: "Вход выполнен успешно."
+      signed_out: "Выход выполнен успешно."
+      already_signed_out: "Выход выполнен успешно."
+      new:
+        title: Войти
+    unlocks:
+      send_instructions: "В течение нескольких минут вы получите письмо с инструкциями по разблокировке вашего аккаунта."
+      send_paranoid_instructions: "Если ваш аккаунт существует, вы получите письмо с инструкциями по его разблокировке в течение нескольких минут."
+      unlocked: "Ваш аккаунт был успешно разблокирован. Пожалуйста, войдите, чтобы продолжить."
+      new:
+        resend_unlock_instructions: "Повторно отправить инструкции по разблокировке"
+    labels:
+      email: "Email"
+      password: "Пароль"
+      password_confirmation: "Подтверждение пароля"
+      current_password: "Текущий пароль"
+      unconfirmed_email: "Email (ожидает подтверждения)"
+      new_password: "Новый пароль"
+      confirm_new_password: "Подтвердите новый пароль"
+    shared:
+      links:
+        unlock_instructions: "Не получили инструкции по разблокировке?"
+        sign_in: "Войти"
+        sign_up: "Зарегистрироваться"
+        forgot_your_password: "Забыли пароль?"
+        didnt_receive_confirmation_instructions: "Не получили инструкции по подтверждению?"
+        didnt_receive_unlock_instructions: "Не получили инструкции по разблокировке?"
+        sign_in_with_provider: "Войти через %{provider}"
+      minimum_password_length: "минимум %{count} символов"
+    placeholders:
+      email: "ваш@email.com"
+  errors:
+    messages:
+      already_confirmed: "уже был подтвержден, пожалуйста, попробуйте войти"
+      confirmation_period_expired: "должен быть подтвержден в течение %{period}, пожалуйста, запросите новый"
+      expired: "истек, пожалуйста, запросите новый"
+      not_found: "не найден"
+      not_locked: "не был заблокирован"
+      not_saved:
+        one: "1 ошибка не позволяет сохранить %{resource}:"
+        other: "%{count} ошибок не позволяют сохранить %{resource}:"

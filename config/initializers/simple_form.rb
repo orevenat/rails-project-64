@@ -1,5 +1,4 @@
 # frozen_string_literal: true
-
 #
 # Uncomment this and change the path if necessary to include your own
 # components.
@@ -8,7 +7,6 @@
 # Dir[Rails.root.join('lib/components/**/*.rb')].each { |f| require f }
 #
 # Use this setup block to configure all options available in SimpleForm.
-# rubocop:disable Layout/LineLength
 SimpleForm.setup do |config|
   # Wrappers are used by the form builder to generate a
   # complete input. You can remove any component from the
@@ -16,7 +14,7 @@ SimpleForm.setup do |config|
   # stack. The options given below are used to wrap the
   # whole input.
   config.wrappers :default, class: :input,
-                            hint_class: :field_with_hint, error_class: :field_with_errors, valid_class: :field_without_errors do |b|
+    hint_class: :field_with_hint, error_class: :field_with_errors, valid_class: :field_without_errors do |b|
     ## Extensions enabled by default
     # Any of these extensions can be disabled for a
     # given input by passing: `f.input EXTENSION_NAME => false`.
@@ -114,7 +112,7 @@ SimpleForm.setup do |config|
   # You can define the class to use on all labels. Default is nil.
   # config.label_class = nil
 
-  # You can define the default class to be used on forms. Can be overriden
+  # You can define the default class to be used on forms. Can be overridden
   # with `html: { :class }`. Defaulting to none.
   # config.default_form_class = nil
 
@@ -176,4 +174,3 @@ SimpleForm.setup do |config|
   # config.input_field_valid_class = 'is-valid'
   # config.input_field_error_class = 'is-invalid'
 end
-# rubocop:enable Layout/LineLength

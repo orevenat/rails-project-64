@@ -1,0 +1,7 @@
+p = t('devise.mailer.unlock_instructions.hello', email: @resource.email)
+
+p = t('devise.mailer.unlock_instructions.account_locked')
+
+p = t('devise.mailer.unlock_instructions.click_link_below')
+
+p = link_to t('devise.mailer.unlock_instructions.unlock_my_account'), unlock_url(@resource, unlock_token: @token)

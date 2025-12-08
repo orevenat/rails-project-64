@@ -1,0 +1,42 @@
+ru:
+  simple_form:
+    "yes": "Да"
+    "no": "Нет"
+    required:
+      text: "обязательно"
+      mark: "*"
+      # You can use any character you like instead of '*'
+      html: '<abbr title="обязательно">*</abbr>'
+    error_notification:
+      default_message: "Во время сохранения возникли ошибки:"
+    # Labels for attributes
+    labels:
+      defaults:
+        name: "Имя"
+        email: "Email"
+        password: "Пароль"
+        password_confirmation: "Подтверждение пароля"
+        current_password: "Текущий пароль"
+        remember_me: "Запомнить меня"
+        title: "Заголовок"
+        content: "Содержание"
+        body: "Текст"
+        description: "Описание"
+      user:
+        email: "Email"
+        password: "Пароль"
+        password_confirmation: "Подтверждение пароля"
+        current_password: "Текущий пароль"
+        remember_me: "Запомнить меня"
+    # Hints
+    hints:
+      defaults:
+        password: "Оставьте пустым, если не хотите менять"
+        current_password: "Нужен для подтверждения изменений"
+    # Placeholders
+    placeholders:
+      defaults:
+        email: "ваш@email.com"
+        password: "••••••"
+        password_confirmation: "••••••"
+        current_password: "••••••"

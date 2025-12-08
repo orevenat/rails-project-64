@@ -1,4 +1,81 @@
+---
 ru:
   posts:
     create:
       success: Статья успешно добавлена
+  errors:
+    messages:
+      not_saved:
+        one: "%{count} ошибка не позволяет сохранить %{resource}:"
+        few: "%{count} ошибки не позволяют сохранить %{resource}:"
+        many: "%{count} ошибок не позволяют сохранить %{resource}:"
+        other: "%{count} ошибок не позволяют сохранить %{resource}:"
+  application:
+    name: "Rails Project 64"
+
+  layouts:
+    application:
+      home: "Главная"
+      add_post: "Добавить пост"
+      profile: "Профиль"
+      sign_in: "Войти"
+      sign_out: "Выйти"
+      register: "Регистрация"
+  datetime:
+    distance_in_words:
+      half_a_minute: "полминуты"
+      less_than_x_seconds:
+        one: "меньше секунды"
+        few: "меньше %{count} секунд"
+        many: "меньше %{count} секунд"
+        other: "меньше %{count} секунд"
+      x_seconds:
+        one: "1 секунда"
+        few: "%{count} секунды"
+        many: "%{count} секунд"
+        other: "%{count} секунд"
+      less_than_x_minutes:
+        one: "меньше минуты"
+        few: "меньше %{count} минут"
+        many: "меньше %{count} минут"
+        other: "меньше %{count} минут"
+      x_minutes:
+        one: "1 минута"
+        few: "%{count} минуты"
+        many: "%{count} минут"
+        other: "%{count} минут"
+      about_x_hours:
+        one: "около 1 часа"
+        few: "около %{count} часов"
+        many: "около %{count} часов"
+        other: "около %{count} часов"
+      x_days:
+        one: "1 день"
+        few: "%{count} дня"
+        many: "%{count} дней"
+        other: "%{count} дня"
+      about_x_months:
+        one: "около 1 месяца"
+        few: "около %{count} месяцев"
+        many: "около %{count} месяцев"
+        other: "около %{count} месяцев"
+      x_months:
+        one: "1 месяц"
+        few: "%{count} месяца"
+        many: "%{count} месяцев"
+        other: "%{count} месяца"
+      about_x_years:
+        one: "около 1 года"
+        few: "около %{count} лет"
+        many: "около %{count} лет"
+        other: "около %{count} лет"
+      over_x_years:
+        one: "более 1 года"
+        few: "более %{count} лет"
+        many: "более %{count} лет"
+        other: "более %{count} лет"
+      almost_x_years:
+        one: "почти 1 год"
+        few: "почти %{count} года"
+        many: "почти %{count} лет"
+        other: "почти %{count} года"
