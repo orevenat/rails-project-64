@@ -17,17 +17,16 @@ gem "cssbundling-rails"
 # Build JSON APIs with ease [https://github.com/rails/jbuilder]
 gem "jbuilder"
 
-gem 'ancestry'
+gem "ancestry"
 gem "bcrypt", "~> 3.1.7"
 gem "devise", "~> 4.9"
 gem "faker"
 gem "slim-rails"
-gem 'simple_form'
+gem "simple_form"
 
 # Use Active Model has_secure_password [https://guides.rubyonrails.org/active_model_basics.html#securepassword]
 
-# Windows does not include zoneinfo files, so bundle the tzinfo-data gem
-gem "tzinfo-data", platforms: %i[ windows jruby ]
+gem "tzinfo-data", platforms: %i[ mingw x64_mingw jruby ]
 
 # Use the database-backed adapters for Rails.cache, Active Job, and Action Cable
 gem "solid_cache"
@@ -47,12 +46,13 @@ gem "thruster", require: false
 gem "image_processing", "~> 1.2"
 
 group :production do
-  gem 'pg'
+  gem "pg"
 end
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
-  gem "debug", platforms: %i[ mri windows ], require: "debug/prelude"
+  gem "debug", platforms: %i[ mingw x64_mingw jruby ], require: "debug/prelude"
+
 
   # Audits gems for known security defects (use config/bundler-audit.yml to ignore issues)
   gem "bundler-audit", require: false
@@ -61,26 +61,26 @@ group :development, :test do
   gem "brakeman", require: false
 
   # Omakase Ruby styling [https://github.com/rails/rubocop-rails-omakase/]
-  gem 'rubocop'
-  gem 'rubocop-performance'
-  gem 'rubocop-rails'
+  gem "rubocop"
+  gem "rubocop-performance"
+  gem "rubocop-rails"
   gem "rubocop-rails-omakase", require: false
-  gem 'slim_lint'
-  gem 'solargraph'
-  gem 'sqlite3'
+  gem "slim_lint"
+  gem "solargraph"
+  gem "sqlite3"
 end
 
 group :development do
   # Use console on exceptions pages [https://github.com/rails/web-console]
-  gem 'html2slim'
-  gem 'i18n-debug'
-  gem 'ruby-lsp-rails'
-  gem 'web-console'
+  gem "html2slim"
+  gem "i18n-debug"
+  gem "ruby-lsp-rails"
+  gem "web-console"
 end
 
 group :test do
   # Use system testing [https://guides.rubyonrails.org/testing.html#system-testing]
   gem "capybara"
   gem "selenium-webdriver"
-  gem 'minitest-power_assert'
+  gem "minitest-power_assert"
 end

@@ -11,7 +11,7 @@ Rails.application.routes.draw do
 
   devise_for :users
 
-  root to: 'home#index'
+  root to: "home#index"
   resources :posts, only: %i[new create show] do
     resources :coments, only: %i[create]
     resources :likes, only: %i[create destroy]

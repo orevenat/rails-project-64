@@ -1,4 +1,4 @@
-require 'test_helper'
+require "test_helper"
 
 class PostsControllerTest < ActionDispatch::IntegrationTest
   setup do
@@ -6,12 +6,12 @@ class PostsControllerTest < ActionDispatch::IntegrationTest
     sign_in @user
   end
 
-  test '#new' do
+  test "#new" do
     get new_post_path
     assert_response :success
   end
 
-  test '#create' do
+  test "#create" do
     attrs = {
       title: Faker::Book.title,
       body: Faker::Lorem.paragraph_by_chars(number: 80),
