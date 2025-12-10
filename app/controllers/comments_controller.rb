@@ -2,7 +2,7 @@ class CommentsController < ApplicationController
   before_action :authenticate_user!
 
   def create
-    @comment = post.comments.build(creator: current_user, **permitted_params)
+    @comment = post.comments.build(user: current_user, **permitted_params)
 
     if @comment.save
       redirect_to @post, notice: t(".published")

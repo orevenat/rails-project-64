@@ -1,7 +1,7 @@
 .card.mt-2.rounded-0 id="comment-#{comment.id}"
   .card-header.border-0
     a.me-2 href="#comment-#{comment.id}" #
-    span.me-2 = comment.creator.email
+    span.me-2 = comment.user.email
     span.fs-6.text-muted = format_comment_date(comment.created_at)
   .card-body.border-0
     p.card-text = comment.content
