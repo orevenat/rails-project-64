@@ -1,0 +1,26 @@
+.card.mt-2.rounded-0 id="comment-#{comment.id}"
+  .card-header.border-0
+    a.me-2 href="#comment-#{comment.id}" #
+    span.me-2 = comment.creator.email
+    span.fs-6.text-muted = format_comment_date(comment.created_at)
+  .card-body.border-0
+    p.card-text = comment.content
+
+  - if current_user
+    .card-footer.border-0
+      a.fs-6.text-decoration-underline.text-lowercase[
+        type="button"
+        aria-expanded="false"
+        aria-controls="response_comment-#{comment.id}"
+        data-bs-target="#response_comment-#{comment.id}"
+        data-bs-toggle="collapse"
+        href="#"
+      ]
+        = t('.reply')
+
+    .ms-2.collapse id="response_comment-#{comment.id}"
+      = render 'comments/form', comment: comment
+
+  - comment.children.each do |child_comment|
+    .ms-4
+      = render 'comments/comment', comment: child_comment

@@ -1,0 +1,36 @@
+ru:
+  activerecord:
+    errors:
+      models:
+        post_comment:
+          attributes:
+            content:
+              blank: "не может быть пустым"
+              too_short: "слишком короткий (минимум %{count} символов)"
+          blank: "не может быть пустым"
+      messages:
+        blank: "не может быть пустым"
+        too_short: "слишком короткий (минимум %{count} символов)"
+        too_long: "слишком длинный (не более %{count} символов)"
+        taken: "уже существует"
+        invalid: "имеет неверное значение"
+    attributes:
+      post_comment:
+        content: "Содержание"
+        body: "Текст"
+        user: "Пользователь"
+        post: "Пост"
+      user:
+        email: "Электронная почта"
+        password: "Пароль"
+      post:
+        title: "Заголовок"
+        body: "Текст"
+  errors:
+    messages:
+      blank: "не может быть пустым"
+      too_short: "слишком короткий (минимум %{count} символов)"
+    attributes:
+      content:
+        blank: "не может быть пустым"
+        too_short: "слишком короткий (минимум %{count} символов)"

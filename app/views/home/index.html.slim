@@ -9,3 +9,11 @@ h1 Коллективный блог
             = link_to post.title, post_path(post), class: 'link-dark text-decoration-none'
           .card-text.mb-2
             = post.body
+
+          .text-right.small.text-muted.mt-auto
+            span.me-2
+              = t('.liked', count: post.likes.count)
+            span.me-2
+              = time_ago_in_words(post.created_at)
+            span
+              = post.creator.email

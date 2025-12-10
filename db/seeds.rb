@@ -7,7 +7,3 @@
 #   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
-
-%w[Ruby Js Development Business Job].each do |word|
-  Category.create(name: word)
-end

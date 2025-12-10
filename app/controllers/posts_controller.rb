@@ -3,7 +3,8 @@ class PostsController < ApplicationController
 
   def show
     @post = Post.find(params[:id])
-    @current_user_liked = current_user ? @post.likes.find_by(creator_id: current_user.id).present? : false
+    @like = current_user ? @post.likes.find_by(creator_id: current_user.id) : false
+    @comments = @post.comments.roots
   end
 
   def new
