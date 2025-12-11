@@ -27,7 +27,7 @@ ol.breadcrumb
             = link_to post_like_path(@post), class: "link-dark", data: { turbo_stream: true, turbo_method: :delete }
               i.bi.bi-hand-thumbs-up-fill
           - else
-            = link_to post_like_path(@post), class: "link-dark", data: { turbo_method: :post }
+            = link_to post_likes_path(@post), class: "link-dark", data: { turbo_method: :post }
               i.bi.bi-hand-thumbs-up
         - else
           i.bi.bi-hand-thumbs-up

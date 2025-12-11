@@ -6,14 +6,14 @@ class LikesControllerTest < ActionDispatch::IntegrationTest
     sign_in @user
 
     post = posts(:one)
-    post post_like_path(post)
+    post post_likes_path(post)
     assert_response :redirect
     assert { PostLike.exists?(creator_id: @user.id) }
   end
 
   test "#create not authorized" do
     post = posts(:one)
-    post post_like_path(post)
+    post post_likes_path(post)
     assert_response :redirect
     assert { flash[:alert].present? }
   end
