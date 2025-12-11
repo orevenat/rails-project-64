@@ -13,9 +13,9 @@ class LikesController < ApplicationController
 
   def destroy
     @like = post.likes.find_by(user: current_user)
-    redirect_to post, alert: t(".like_not_found") unless @like
+    redirect_to post, alert: t(".like_not_found") if @like.blank?
 
-    if @like.destroy
+    if @like&.destroy
       redirect_to @post, notice: t(".like_removed")
     else
       errors = @like.errors.full_messages.join(", ")
