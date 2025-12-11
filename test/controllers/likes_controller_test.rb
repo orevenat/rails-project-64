@@ -1,7 +1,7 @@
-require "test_helper"
+require 'test_helper'
 
 class LikesControllerTest < ActionDispatch::IntegrationTest
-  test "#create" do
+  test '#create' do
     @user = users(:two)
     sign_in @user
 
@@ -11,14 +11,14 @@ class LikesControllerTest < ActionDispatch::IntegrationTest
     assert { PostLike.exists?(creator_id: @user.id) }
   end
 
-  test "#create not authorized" do
+  test '#create not authorized' do
     post = posts(:one)
     post post_likes_path(post)
     assert_response :redirect
     assert { flash[:alert].present? }
   end
 
-  test "#destroy" do
+  test '#destroy' do
     @user = users(:one)
     sign_in @user
 
@@ -29,7 +29,7 @@ class LikesControllerTest < ActionDispatch::IntegrationTest
     assert { !PostLike.exists?(id: like.id) }
   end
 
-  test "#destroy not authorized" do
+  test '#destroy not authorized' do
     like = post_likes(:one)
 
     delete post_like_path(like.post)

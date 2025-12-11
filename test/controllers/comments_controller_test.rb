@@ -1,7 +1,7 @@
-require "test_helper"
+require 'test_helper'
 
 class CommentsControllerTest < ActionDispatch::IntegrationTest
-  test "#create" do
+  test '#create' do
     @user = users(:one)
     sign_in @user
 
@@ -16,7 +16,7 @@ class CommentsControllerTest < ActionDispatch::IntegrationTest
     assert { PostComment.exists?(content: attrs[:content]) }
   end
 
-  test "#create with parent_id" do
+  test '#create with parent_id' do
     @user = users(:one)
     sign_in @user
 
@@ -34,7 +34,7 @@ class CommentsControllerTest < ActionDispatch::IntegrationTest
     assert { PostComment.find_by(content: attrs[:content]).ancestry == "/#{comment.id}/" }
   end
 
-  test "#create with error" do
+  test '#create with error' do
     @user = users(:one)
     sign_in @user
 
@@ -50,7 +50,7 @@ class CommentsControllerTest < ActionDispatch::IntegrationTest
     assert { flash[:alert].present? }
   end
 
-  test "#create not authorized" do
+  test '#create not authorized' do
     attrs = {
       content: Faker::Lorem.paragraph_by_chars(number: 80)
     }

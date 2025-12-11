@@ -1,7 +1,7 @@
-require "test_helper"
+require 'test_helper'
 
 class PostsControllerTest < ActionDispatch::IntegrationTest
-  test "#new" do
+  test '#new' do
     @user = users(:one)
     sign_in @user
 
@@ -9,12 +9,12 @@ class PostsControllerTest < ActionDispatch::IntegrationTest
     assert_response :success
   end
 
-  test "#new not authorized" do
+  test '#new not authorized' do
     get new_post_path
     assert_response :redirect
   end
 
-  test "#create" do
+  test '#create' do
     @user = users(:one)
     sign_in @user
 
@@ -29,7 +29,7 @@ class PostsControllerTest < ActionDispatch::IntegrationTest
     assert { Post.exists?(title: attrs[:title]) }
   end
 
-  test "#create not authorized" do
+  test '#create not authorized' do
     attrs = {
       title: Faker::Book.title,
       body: Faker::Lorem.paragraph_by_chars(number: 80),

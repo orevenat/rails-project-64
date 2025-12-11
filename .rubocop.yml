@@ -1,5 +1,5 @@
 # Omakase Ruby styling for Rails
-inherit_gem: { rubocop-rails-omakase: rubocop.yml }
+# inherit_gem: { rubocop-rails-omakase: rubocop.yml }
 
 AllCops:
   DisplayCopNames: true
@@ -15,6 +15,9 @@ AllCops:
 
 Rails/UniqueValidationWithoutIndex:
   Enabled: false
+
+Style/StringLiterals:
+  Enabled: true
 
 Layout/LineLength:
   Enabled: false

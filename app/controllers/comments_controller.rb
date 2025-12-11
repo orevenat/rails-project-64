@@ -5,9 +5,9 @@ class CommentsController < ApplicationController
     @comment = post.comments.build(user: current_user, **permitted_params)
 
     if @comment.save
-      redirect_to @post, notice: t(".published")
+      redirect_to @post, notice: t('.published')
     else
-      flash[:alert] = @comment.errors.full_messages.join(", ")
+      flash[:alert] = @comment.errors.full_messages.join(', ')
       redirect_to @post
     end
   end
