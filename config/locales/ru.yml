@@ -43,10 +43,8 @@ ru:
       liked: "Пост понравился"
       unliked: "Не удалось поставить лайк"
     destroy:
-      like_not_found: "Лайк не найден"
       like_removed: "Лайк удален"
-      like_remoing_errors: "Не получилось удалить лайк: #{errors}"
-
+      like_remoing_errors: "Не получилось удалить лайк"
   errors:
     messages:
       not_saved:
