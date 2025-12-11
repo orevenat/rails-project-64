@@ -27,6 +27,7 @@ ru:
     please_login: "Пожалуйста, залогинтесь"
   posts:
     show:
+      all_posts: "Все посты"
       comments: "Комментарии"
     create:
       success: Статья успешно добавлена
