@@ -13,6 +13,9 @@ AllCops:
   TargetRailsVersion: 6
   TargetRubyVersion: 3.2
 
+Rails/UniqueValidationWithoutIndex:
+  Enabled: false
+
 Layout/LineLength:
   Enabled: false
 

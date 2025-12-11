@@ -6,7 +6,7 @@ class CommentsControllerTest < ActionDispatch::IntegrationTest
     sign_in @user
 
     attrs = {
-      content: Faker::Lorem.paragraph_by_chars(number: 80),
+      content: Faker::Lorem.paragraph_by_chars(number: 80)
     }
 
     post = posts(:one)
@@ -39,7 +39,7 @@ class CommentsControllerTest < ActionDispatch::IntegrationTest
     sign_in @user
 
     attrs = {
-      content: Faker::Lorem.paragraph_by_chars(number: 1),
+      content: Faker::Lorem.paragraph_by_chars(number: 1)
     }
 
     post = posts(:one)
@@ -52,7 +52,7 @@ class CommentsControllerTest < ActionDispatch::IntegrationTest
 
   test "#create not authorized" do
     attrs = {
-      content: Faker::Lorem.paragraph_by_chars(number: 80),
+      content: Faker::Lorem.paragraph_by_chars(number: 80)
     }
 
     post = posts(:one)

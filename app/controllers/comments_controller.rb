@@ -7,7 +7,7 @@ class CommentsController < ApplicationController
     if @comment.save
       redirect_to @post, notice: t(".published")
     else
-      flash[:alert] = @comment.errors.full_messages.join(', ')
+      flash[:alert] = @comment.errors.full_messages.join(", ")
       redirect_to @post
     end
   end

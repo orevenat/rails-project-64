@@ -22,4 +22,4 @@ deep_nested:
   content: deep comment
   user: one
   post: one
-  ancestry: /<%= [ActiveRecord::FixtureSet.identify(:with_comments), ActiveRecord::FixtureSet.identify(:nested)].join('/') %>/
+  ancestry: /<%= [ActiveRecord::FixtureSet.identify(:with_comments), ActiveRecord::FixtureSet.identify(:nested)].join("/") %>/
