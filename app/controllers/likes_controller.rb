@@ -2,7 +2,7 @@ class LikesController < ApplicationController
   before_action :authenticate_user!
 
   def create
-    @like = post.likes.build(creator: current_user)
+    @like = post.likes.build(user: current_user)
 
     if @like.save
       redirect_to @post, notice: t(".liked")
@@ -12,7 +12,7 @@ class LikesController < ApplicationController
   end
 
   def destroy
-    @like = post.likes.find_by(creator: current_user, id: params[:id])
+    @like = post.likes.find_by(user: current_user, id: params[:id])
     redirect_to post, alert: t(".like_not_found") unless @like
 
     if @like.destroy
