@@ -26,6 +26,6 @@ class PostsController < ApplicationController
   private
 
   def permitted_params
-    params.require(:post).permit(:title, :body, :category_id)
+    params.expect(post: %i[title body category_id])
   end
 end
