@@ -31,12 +31,12 @@ ActiveRecord::Schema[8.1].define(version: 2025_12_11_062741) do
 
   create_table "post_likes", force: :cascade do |t|
     t.datetime "created_at", null: false
+    t.integer "creator_id", null: false
     t.integer "post_id", null: false
     t.datetime "updated_at", null: false
-    t.integer "user_id", null: false
+    t.index ["creator_id", "post_id"], name: "index_post_likes_on_creator_id_and_post_id", unique: true
+    t.index ["creator_id"], name: "index_post_likes_on_creator_id"
     t.index ["post_id"], name: "index_post_likes_on_post_id"
-    t.index ["user_id", "post_id"], name: "index_post_likes_on_user_id_and_post_id", unique: true
-    t.index ["user_id"], name: "index_post_likes_on_user_id"
   end
 
   create_table "posts", force: :cascade do |t|
@@ -65,7 +65,7 @@ ActiveRecord::Schema[8.1].define(version: 2025_12_11_062741) do
   add_foreign_key "post_comments", "posts"
   add_foreign_key "post_comments", "users"
   add_foreign_key "post_likes", "posts"
-  add_foreign_key "post_likes", "users"
+  add_foreign_key "post_likes", "users", column: "creator_id"
   add_foreign_key "posts", "categories"
   add_foreign_key "posts", "users", column: "creator_id"
 end

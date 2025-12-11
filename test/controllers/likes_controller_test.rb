@@ -8,7 +8,7 @@ class LikesControllerTest < ActionDispatch::IntegrationTest
     post = posts(:one)
     post post_likes_path(post)
     assert_response :redirect
-    assert { PostLike.exists?(user_id: @user.id) }
+    assert { PostLike.exists?(creator_id: @user.id) }
   end
 
   test "#create not authorized" do
