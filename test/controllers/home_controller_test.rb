@@ -5,4 +5,11 @@ class HomeControllerTest < ActionDispatch::IntegrationTest
     get root_path
     assert_response :success
   end
+
+  test "#index authorized" do
+    @user = users(:one)
+    sign_in @user
+    get root_path
+    assert_response :success
+  end
 end
