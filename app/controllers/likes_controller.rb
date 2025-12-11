@@ -18,7 +18,7 @@ class LikesController < ApplicationController
     if @like&.destroy
       redirect_to @post, notice: t(".like_removed")
     else
-      errors = @like.errors.full_messages.join(", ")
+      errors = @like&.errors&.full_messages&.join(", ")
       redirect_to @post, alert: t(".like_remoing_errors", errors)
     end
   end
