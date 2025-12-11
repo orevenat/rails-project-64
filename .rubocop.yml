@@ -23,9 +23,6 @@ Rails/UniqueValidationWithoutIndex:
 Style/StringLiterals:
   Enabled: true
 
-Style/FrozenStringLiteralComment:
-  Enabled: false
-
 Layout/LineLength:
   Enabled: false
 
