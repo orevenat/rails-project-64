@@ -7,7 +7,7 @@ h2.mb-4 = t('devise.confirmations.new.resend_confirmation_instructions')
     = f.input :email,
               required: true,
               autofocus: true,
-              input_html: { 
+              input_html: {
                 autocomplete: "email",
                 value: (resource.pending_reconfirmation? ? resource.unconfirmed_email : resource.email)
               },
