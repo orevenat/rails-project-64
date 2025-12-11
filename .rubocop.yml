@@ -1,6 +1,10 @@
 # Omakase Ruby styling for Rails
 # inherit_gem: { rubocop-rails-omakase: rubocop.yml }
 
+require:
+  - rubocop-performance
+  - rubocop-rails
+
 AllCops:
   DisplayCopNames: true
   Exclude:
@@ -18,6 +22,9 @@ Rails/UniqueValidationWithoutIndex:
 
 Style/StringLiterals:
   Enabled: true
+
+Style/FrozenStringLiteralComment:
+  Enabled: false
 
 Layout/LineLength:
   Enabled: false
@@ -42,10 +49,6 @@ Metrics/PerceivedComplexity:
 
 Rails:
   Enabled: true
-
-require:
-  - rubocop-performance
-  - rubocop-rails
 
 Style/AsciiComments:
   Enabled: false
