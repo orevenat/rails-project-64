@@ -14,6 +14,6 @@ Rails.application.routes.draw do
   root to: "home#index"
   resources :posts, only: %i[new create show] do
     resources :comments, only: %i[create]
-    resources :likes, only: %i[create destroy]
+    resource :likes, only: %i[create destroy]
   end
 end

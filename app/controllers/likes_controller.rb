@@ -12,7 +12,7 @@ class LikesController < ApplicationController
   end
 
   def destroy
-    @like = post.likes.find_by(user: current_user, id: params[:id])
+    @like = post.likes.find_by(user: current_user)
     redirect_to post, alert: t(".like_not_found") unless @like
 
     if @like.destroy

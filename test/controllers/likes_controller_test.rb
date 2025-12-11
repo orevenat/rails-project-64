@@ -24,7 +24,7 @@ class LikesControllerTest < ActionDispatch::IntegrationTest
 
     like = post_likes(:one)
 
-    delete post_like_path(like.post, like)
+    delete post_likes_path(like.post)
     assert_response :redirect
     assert { !PostLike.exists?(id: like.id) }
   end
@@ -32,7 +32,7 @@ class LikesControllerTest < ActionDispatch::IntegrationTest
   test "#destroy not authorized" do
     like = post_likes(:one)
 
-    delete post_like_path(like.post, like)
+    delete post_likes_path(like.post)
     assert_response :redirect
     assert { PostLike.exists?(id: like.id) }
     assert { flash[:alert].present? }
