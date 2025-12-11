@@ -23,6 +23,8 @@ ru:
   time:
     formats:
       short: "%d %b, %H:%M"
+  base:
+    please_login: "Пожалуйста, залогинтесь"
   posts:
     show:
       comments: "Комментарии"
@@ -36,6 +38,15 @@ ru:
       submit_comment: "Оставить комментарий"
     create:
       published: "Комментарий опубликован"
+  likes:
+    create:
+      liked: "Пост понравился"
+      unliked: "Не удалось поставить лайк"
+    destroy:
+      like_not_found: "Лайк не найден"
+      like_removed: "Лайк удален"
+      like_remoing_errors: "Не получилось удалить лайк: #{errors}"
+
   errors:
     messages:
       not_saved:

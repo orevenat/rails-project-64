@@ -5,26 +5,21 @@ class LikesController < ApplicationController
     @like = post.likes.build(user: current_user)
 
     if @like.save
-      redirect_to @post, notice: "Пост понравился"
+      redirect_to @post, notice: t(".liked")
     else
-      redirect_to @post, alert: "Не удалось поставить лайк"
+      redirect_to @post, alert: t(".unliked")
     end
   end
 
   def destroy
     @like = post.likes.find_by(user: current_user, id: params[:id])
-    redirect_to post, alert: "Лайк не найден" unless @like
+    redirect_to post, alert: t(".like_not_found") unless @like
 
     if @like.destroy
-      respond_to do |format|
-        format.html { redirect_to @post, notice: "Лайк удален" }
-        format.json { render json: { likes_count: @post.likes.count } }
-      end
+      redirect_to @post, notice: t(".like_removed")  
     else
-      respond_to do |format|
-        format.html { redirect_to @post, alert: "Не удалось удалить лайк" }
-        format.json { render json: @like.errors, status: :unprocessable_content }
-      end
+      errors = @like.errors.full_messages.join(', ')
+      redirect_to @post, alert: t(".like_remoing_errors", errors)
     end
   end
 

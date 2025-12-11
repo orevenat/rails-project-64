@@ -8,10 +8,7 @@ class ApplicationController < ActionController::Base
     if user_signed_in?
       super
     else
-      respond_to do |format|
-        format.html { redirect_to new_user_session_path, alert: "Please sign in." }
-        format.json { render json: { error: "Unauthorized" }, status: :unauthorized }
-      end
+      redirect_to new_user_session_path, alert: t("base.please_login")
     end
   end
 end
