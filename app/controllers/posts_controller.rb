@@ -17,9 +17,9 @@ class PostsController < ApplicationController
     @post = current_user.posts.build(permitted_params)
 
     if @post.save
-      redirect_to root_path, notice: I18n.t('.success')
+      redirect_to root_path, notice: I18n.t('posts.create.success')
     else
-      render :new, status: :unprocessable_content, alert: I18n.t('.failure')
+      render :new, status: :unprocessable_content, alert: I18n.t('posts.create.failure')
     end
   end
 
