@@ -8,6 +8,10 @@ ru:
               blank: "не может быть пустым"
               too_short: "слишком короткий (минимум %{count} символов)"
           blank: "не может быть пустым"
+        post:
+          attributes:
+            category:
+              blank: "не может быть пустым"
       messages:
         blank: "не может быть пустым"
         too_short: "слишком короткий (минимум %{count} символов)"
@@ -26,6 +30,7 @@ ru:
       post:
         title: "Заголовок"
         body: "Текст"
+        category: "Категория"
   errors:
     messages:
       blank: "не может быть пустым"

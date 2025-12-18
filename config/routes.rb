@@ -19,4 +19,6 @@ Rails.application.routes.draw do
     resource :likes, only: %i[create]
     resource :like, only: %i[destroy]
   end
+
+  resources :categories, only: %i[new create]
 end
