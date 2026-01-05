@@ -20,7 +20,7 @@ gem 'cssbundling-rails'
 gem 'jbuilder'
 
 gem 'ancestry'
-gem 'bcrypt', '~> 3.1.7'
+gem 'bcrypt', '~> 3.1.21'
 gem 'devise', '~> 4.9'
 gem 'faker'
 gem 'simple_form'
